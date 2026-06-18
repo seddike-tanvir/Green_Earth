@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Go to live preview page</title>
+    <link rel="shortcut icon" href="./public/assets/files/logo.png" type="image/x-icon">
+    <style>
+            * {
+                margin: 0;
+                padding: 0;
+                box-sizing: border-box;
+                font-family: monospace;
+                /* border: 1px solid; */
+            }
+
+            body {
+                background: white;
+            }
+
+            .main_body {
+                width: 90%;
+                max-width: 1100px;
+                margin: auto;
+                margin-top: 17vh;
+            }
+
+            .h1 {
+                font-size: 2.8rem;
+                margin-bottom: 3rem;
+            }
+
+            .h2,
+            .h2 a {
+                font-size: 2rem;
+            }
+
+            button {
+                border: 1px solid #00000081;
+                padding: .1rem .4rem;
+                border-radius: 7px;
+                cursor: pointer;  
+            }
+            button:hover {
+                background: #00000081;
+                color: white;
+                transition: .3s;
+            }
+
+            p{
+                font-size: 1.1rem;
+            }
+
+            .p{
+                margin-bottom: 10vh;
+            }
+
+            .credit {
+                color: #00000081;
+            }
+
+
+            /* Countdown Seal */
+
+            .p_countdown {
+                border-left: 5px solid #000000c4;
+                border-radius: 10px;
+                padding-left: 1rem;
+                padding: .5rem 1rem;
+                margin: 5vh 0;
+                animation: float 2s ease-in-out infinite;
+                width: 50%;
+                gap: .5rem;
+                display: flex;
+                flex-direction: column;
+            }
+
+            .redirecting_txt{
+                margin-top: .5rem;
+            }
+
+            .p_countdown p {
+                font-size: 1.1rem;
+                /* padding-bottom: 1rem; */
+                letter-spacing: 1px;
+                color: #000000b3;
+            }
+
+
+            #countdown {
+                width: 100%;
+                height: auto;
+                font-size: 3.5rem;
+                font-weight: bold;
+                text-align: left;
+                padding-left: 2rem;
+                color: #ff0000;
+            }
+            .countdown_div {
+                display: flex;
+                align-items: center;
+                width: fit-content;
+            }
+            .countdown_div #seconds {
+                margin-left: 1rem;
+            }
+
+            @keyframes float {
+                0%,
+                100% {
+                    transform: translateY(0);
+                }
+                50% {
+                    transform: translateY(-8px);
+                }
+            }
+
+            @media(max-width:600px) {
+                .h1 {
+                    font-size: 2rem;
+                }
+                .h2,
+                .h2 a {
+                    font-size: 1.3rem;
+                }
+                .p_countdown {
+                    width: 100px;
+                    height: 100px;
+                    right: 15px;
+                    bottom: 15px;
+                }
+                #countdown {
+                    font-size: 2.7rem;
+                }
+            }
+    </style>
+</head>
+
+<body>
+    <div class="main_body">
+        <h1 class="h1">        PH B12 A06 : Green-Earth    </h1>
+        <br>
+        <h2 class="h2">        Go to live homepage:        <a href="./public/"  title="Green Earth - Homepage URL">./public/index.html</a>    </h2>
+        <br>
+        <p> Or, Check the latest screenshot of this project mainpage UI: <a href="./Final_UI_Look.png"> <button title="URL: ./Final_UI_Look.png">./Final_UI_Look.png</button></a> </p>
+        <!-- <p> Or, Check the latest screenshot of this project mainpage UI: <a href="./Final_UI_Look.png">./Final_UI_Look.png</a> </p> -->
+        <br>
+        <br>
+        <p class="p"> Ami project ta te kaj er somoy dekhte hijibiji lagtasilo, eijonno live page er code ta "public/" folder e rekhesi. </p>
+        <br>
+        <div class="p_countdown">
+            <p class="redirecting_txt">Redirecting to <a href="./public/"><button title="URL: ./public/index.html">Green Earth - Homepage</button></a> </p>
+            <div class="countdown_div">
+                <p>within</p>
+                <p id="countdown">15</p>
+                <p id="seconds">seconds</p>
+            </div>
+        </div> 
+        <br><br><br>
+        <p class="credit"> &copy; 2026 Seddike Tanvir. Sunday Monday Closed. </p>
+    </div>
+    <!-- Floating Countdown -->
+
+    <script>
+        const countdownElement = document.getElementById("countdown");
+        let seconds = 15;
+        window.addEventListener("load", () => {
+            const interval = setInterval(() => {
+                seconds--;
+                countdownElement.textContent = seconds;
+                if(seconds <= 0){
+                    clearInterval(interval);
+                    window.location.href = "./public/";
+                }
+            },1000);
+        });
+    </script>
+</body>
+
+</html>
