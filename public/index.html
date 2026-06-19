@@ -16,7 +16,12 @@
     <link rel="stylesheet" href="/public/assets/css/style.css">
 
 </head>
-<body class="" id="htmlBody">
+<body class="bg-[#f0fdf4]" id="htmlBody">
+    <div id="loadingScreen" class="loadingScreen bg-[#026326e3] fixed w-[100vw] h-[100vh] inset-0 flex justify-center items-center z-[1000]" >
+        <!-- <span class=" loading-${loaderType} loading-${itemSize} scale-[${itemScale}] text-[${itemColor}]"></span> -->
+    </div>
+    <script src="./assets/js/Loading_Screen_Function.js"></script>
+
     <section class="navAreaSection  w-full min-h-[96px] bg-[#15803d] flex justify-center items-center shadow-lg">
         <div class="navbar w-11/12 max-w-[90vw] h-full flex flex-row justify-between">
             <div class="navbar-start">
@@ -38,13 +43,13 @@
                     <li><a>Item 3</a></li>
                 </ul>
                 </div>
-                <a class="cursor-pointer text-xl font-semibold text-white" href="./">🌱 Green Earth</a>
+                <a class="cursor-pointer text-2xl font-semibold text-white " href="./">🌱 Green Earth</a>
             </div>
             <div class="navbar-center hidden lg:flex">
-                <ul class="menu menu-horizontal px-1 text-[#ffffff] font-semibold">
-                <li><a>About</a></li>
-                <li><a>Gallary</a></li>
-                <li><a>Plant a tree</a></li>
+                <ul class="menu  menu-horizontal px-1 text-[#ffffff] font-semibold">
+                <li class="hover:text-[#facc15] hover:bg-transparent"><a>About</a></li>
+                <li class="hover:text-[#facc15] hover:bg-transparent"><a>Gallary</a></li>
+                <li class="hover:text-[#facc15] hover:bg-transparent"><a>Vision</a></li>
                 </ul>
             </div>
             <div class="navbar-end">
@@ -55,9 +60,7 @@
     </section>
 
 
-
-
-    <section class="heroAreaSection  w-full min-h-[383px] bg-[#cff0dc] flex justify-center items-end shadow-lg">
+    <section class="heroAreaSection  w-full min-h-[383px] bg-[#cff0dc] flex justify-center items-end shadow-lg rounded-b-[2rem]">
         <div class="heroArea w-95/100 max-w-[100vw] h-full m-o flex flex-row justify-between items-center ">
             <div class="heroLeft  w-max max-w-[30%] flex justify-start">
                 <img src="./assets/files/hero-leaf1.png" alt="" class=" ">
@@ -71,7 +74,7 @@
                         <p class="py-4 mb-6">
                             Join our mission to plant 1 million trees and make the Earth greener for future generations.
                         </p>
-                        <a class="btn -mb-4 bg-[#facc15] hover:bg-[#15803d] hover:text-[#ffffff] border-[#00cf00] rounded-[2rem] hover:scale-98">Get Involved</a>
+                        <a class="btn -mb-4 bg-[#facc15] hover:bg-[#15803d]  hover:text-[#ffffff] border-[#00cf00] rounded-[2rem] hover:scale-98">Get Involved</a>
                         </div>
                     </div>
                     </div>
@@ -85,7 +88,66 @@
 
     </section>
 
+    <section class="mainareaSection  w-full min-h-[100vh] bg-[#15803c00] flex flex-col justify-start items-center">
+        <div class="mainAreaHeader mt-[15vh] ">
+            <h1 class="mainAreaHeader_h1 text-[1.6rem] font-semibold">Choose Your Trees</h1>
+        </div>
 
+        <div class="innerMainAreaDivWrapper   w-14/15 mt-[4vh] flex flex-row gap-2 justify-between items-start">
+            <div class="categoriesArea  w-3/20 bg-transparent rounded-box shadwow-lg  rounded-sm p-1">
+                    <div class="categoriesAreaHeader  w-full h-auto ">
+                        <h2 class="categoriesAreaHeader_h2 text-[1.2rem] font-medium text-left my-auto mx-1 mb-2">Categories</h2>
+                    </div>
+                    <div id="cardsWrapper" class="cardsWrapper  w-full">
+                        <ul id="categoriesList" class="menu w-full px-0 gap-2">
+                            <li class="w-full px-4 py-1 mx-0 text-[#ffffffec] bg-[#15803D] rounded-sm shadow-md cursor-pointer"><a class="p-0">All Trees</a></li>
+                            <!-- <li class="w-full px-4 py-1 mx-0 text-[#1f2937] hover:text-[#ffffffec] bg-tranaparent hover:bg-[#15803D] rounded-sm">Fruit Trees</li>
+                            <li class="w-full px-4 py-1 mx-0 text-[#1f2937] hover:text-[#ffffffec] bg-tranaparent hover:bg-[#15803D] rounded-sm">Flowering Trees</li>
+                            <li class="w-full px-4 py-1 mx-0 text-[#1f2937] hover:text-[#ffffffec] bg-tranaparent hover:bg-[#15803D] rounded-sm">Shade Trees</li>
+                            <li class="w-full px-4 py-1 mx-0 text-[#1f2937] hover:text-[#ffffffec] bg-tranaparent hover:bg-[#15803D] rounded-sm">Medical Trees</li>
+                            <li class="w-full px-4 py-1 mx-0 text-[#1f2937] hover:text-[#ffffffec] bg-tranaparent hover:bg-[#15803D] rounded-sm">Timber Trees</li>
+                            <li class="w-full px-4 py-1 mx-0 text-[#1f2937] hover:text-[#ffffffec] bg-tranaparent hover:bg-[#15803D] rounded-sm">Evergreen Trees</li>
+                            <li class="w-full px-4 py-1 mx-0 text-[#1f2937] hover:text-[#ffffffec] bg-tranaparent hover:bg-[#15803D] rounded-sm">Ornamental Trees</li>
+                            <li class="w-full px-4 py-1 mx-0 text-[#1f2937] hover:text-[#ffffffec] bg-tranaparent hover:bg-[#15803D] rounded-sm">Bamboo</li>
+                            <li class="w-full px-4 py-1 mx-0 text-[#1f2937] hover:text-[#ffffffec] bg-tranaparent hover:bg-[#15803D] rounded-sm">Climbers</li>
+                            <li class="w-full px-4 py-1 mx-0 text-[#1f2937] hover:text-[#ffffffec] bg-tranaparent hover:bg-[#15803D] rounded-sm">Aquatic Plants</li> -->
+                        </ul>
+                    </div>
+            </div>
+
+            <div class="cardWrapperArea  w-14/20 bg-[#ffffff] rounded-box shadwow-lg  rounded-sm p-1">
+                    <div class="cardWrapperAreaHeader  w-full h-auto ">
+                        <h2 class="cardWrapperAreaHeader_h2 text-[1.2rem] font-semibold text-left my-auto mx-2"></h2>
+                    </div>            
+            </div>
+
+            <div class="cartArea  w-4/20 bg-[#ffffff] rounded-box shadwow-lg  rounded-sm p-4">
+                    <div class="cartAreaHeader  w-full h-auto ">
+                        <h2 class="cartAreaHeader_h2 text-[1.2rem] font-medium text-left my-auto mx-2 pt-1 mb-2">Your Cart</h2>
+                    </div>
+                        <div id="cartProductsWrapper" class="menu w-full px-0 gap-[1px] flex flex-col">
+                            <div class="cardProduct  w-full px-4 py-1 mx-0 bg-[#f0fdf4] rounded-sm flex flex-row justify-between items-center gap-1 border border-[#f0fdf4] hover:border-[#15803c2f] hover:shadow-sm cursor-pointer">
+                                <div class="flex flex-col gap-1">
+                                    <h3 class="productTitle px-0 text-semibold">Mango Tree</h3>
+                                    <h3 class="productPrice px-0 text-normal text-gray-500">
+                                        &#2547 <span id="productPrice">500</span>
+                                        &nbsp;&times;&nbsp; <span id="productQty">1</span>
+                                    </h3>
+                                </div>
+                                <div>
+                                    <button class="text-xl text-gray-400 cursor-pointer hover:text-red-500">&times;</button>
+                                </div>
+                            </div>
+                            <hr class="w-full h-[1px] border-gray-300 mt-2 mb-2">
+                            <div class="totalPrice flex flex-row justify-between mx-1 ">
+                                <h3 class="totalPriceTitle px-0 text-bold">Total:</h3>
+                                <h3 class="totalPriceTitle px-0 text-bold">&#2547 <span id="totalPrice">500</span></h3>
+                            </div>
+
+                        </div>
+            </div>
+        </div>
+    </section>
 
 
 
@@ -163,8 +225,8 @@
 
 
 
-
-    <script src="/public/assets/js/script.js"></script>
+    <!-- <script src="/public/assets/js/script.js"></script> -->
+    <script src="/public/assets/js/loadCategories.js"></script>
 
 </body>
 </html>
