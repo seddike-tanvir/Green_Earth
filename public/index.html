@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Green Earth</title>
     <link rel="shortcut icon" href="/public/assets/files/about.png" type="image/x-icon">
-    <script src="https://sm-uic.pages.dev/js/disable&secure.js"></script>
+    <!-- <script src="https://sm-uic.pages.dev/js/disable&secure.js"></script> -->
     <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
     <link href="https://cdn.jsdelivr.net/npm/daisyui@5" rel="stylesheet" type="text/css" />
     <link href="https://cdn.jsdelivr.net/npm/daisyui@5/themes.css" rel="stylesheet" type="text/css" />
@@ -88,78 +88,69 @@
 
     </section>
 
-    <section class="mainareaSection  w-full min-h-[100vh] bg-[#15803c00] flex flex-col justify-start items-center">
-        <div class="mainAreaHeader mt-[15vh] ">
-            <h1 class="mainAreaHeader_h1 text-[1.6rem] font-semibold">Choose Your Trees</h1>
-        </div>
-
-        <div class="innerMainAreaDivWrapper   w-14/15 mt-[4vh] flex flex-row gap-4 justify-between items-start">
-            <div class="categoriesArea  w-3/20 bg-transparent rounded-box shadwow-lg  rounded-sm p-1">
-                    <div class="categoriesAreaHeader  w-full h-auto ">
-                        <h2 class="categoriesAreaHeader_h2 text-[1.2rem] font-medium text-left my-auto mx-1 mb-2">Categories</h2>
-                    </div>
-                    <div id="cardsWrapper" class="cardsWrapper  w-full">
-                        <ul id="categoriesList" class="menu w-full px-0 gap-2">
-                            <li class="w-full px-4 py-1 mx-0 text-[#ffffffec] bg-[#15803D] rounded-sm shadow-md cursor-pointer"><a class="p-0">All Trees</a></li>
-                            <!-- <li class="w-full px-4 py-1 mx-0 text-[#1f2937] hover:text-[#ffffffec] bg-tranaparent hover:bg-[#15803D] rounded-sm">Fruit Trees</li>
-                            <li class="w-full px-4 py-1 mx-0 text-[#1f2937] hover:text-[#ffffffec] bg-tranaparent hover:bg-[#15803D] rounded-sm">Flowering Trees</li>
-                            <li class="w-full px-4 py-1 mx-0 text-[#1f2937] hover:text-[#ffffffec] bg-tranaparent hover:bg-[#15803D] rounded-sm">Shade Trees</li>
-                            <li class="w-full px-4 py-1 mx-0 text-[#1f2937] hover:text-[#ffffffec] bg-tranaparent hover:bg-[#15803D] rounded-sm">Medical Trees</li>
-                            <li class="w-full px-4 py-1 mx-0 text-[#1f2937] hover:text-[#ffffffec] bg-tranaparent hover:bg-[#15803D] rounded-sm">Timber Trees</li>
-                            <li class="w-full px-4 py-1 mx-0 text-[#1f2937] hover:text-[#ffffffec] bg-tranaparent hover:bg-[#15803D] rounded-sm">Evergreen Trees</li>
-                            <li class="w-full px-4 py-1 mx-0 text-[#1f2937] hover:text-[#ffffffec] bg-tranaparent hover:bg-[#15803D] rounded-sm">Ornamental Trees</li>
-                            <li class="w-full px-4 py-1 mx-0 text-[#1f2937] hover:text-[#ffffffec] bg-tranaparent hover:bg-[#15803D] rounded-sm">Bamboo</li>
-                            <li class="w-full px-4 py-1 mx-0 text-[#1f2937] hover:text-[#ffffffec] bg-tranaparent hover:bg-[#15803D] rounded-sm">Climbers</li>
-                            <li class="w-full px-4 py-1 mx-0 text-[#1f2937] hover:text-[#ffffffec] bg-tranaparent hover:bg-[#15803D] rounded-sm">Aquatic Plants</li> -->
-                        </ul>
-                    </div>
+    <section class="mainareaSection  w-full min-h-[100vh] bg-[#15803c00] flex flex-col justify-start items-center position-relative ">
+        <div class="mainAreaWrapper w-full max-w-[100vw] h-full flex flex-col justify-start items-center">
+            <div class="mainAreaHeader mt-[15vh] sticky top-[0vh] z-30 bg-[#f0fdf4] py-4 w-full flex justify-center">
+                <h1 class="mainAreaHeader_h1 text-[1.6rem] font-semibold">Choose Your Trees</h1>
             </div>
 
-            <div class="cardWrapperArea  w-14/20 bg-[#ffffff] rounded-box shadwow-lg  rounded-sm p-1">
-                    <div class="cardWrapperAreaHeader  w-full h-auto ">
-                        <!-- <h2 class="cardWrapperAreaHeader_h2 text-[1.2rem] font-semibold text-left my-auto mx-2">Check Our Latest Trees</h2> -->
-                        <div id="CardsWrapper" class="cardsGrid w-full mt-4 px-2 pb-4 grid justify-items-center grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-                                <!-- Card 1 -->
-                                <div class="productCard max-w-[17.5rem] bg-white rounded-lg shadow hover:shadow-md hover:shadow-[#1c97492f] border border-[#c3e7cea9] hover:border-[#97c9a6d3]  p-4">
-                                    <div class="media h-40 bg-gray-100 rounded-md mb-4"></div>
-                                    <h3 class="text-[1rem] font-semibold mb-2 hover:cursor-pointer hover:text-[#0d6e31ab] hover:underline">Mango Tree</h3>
-                                    <p class="text-sm text-gray-500 mb-3">A fast-growing tropical tree that produces delicious, juicy mangoes during summer.</p>
-                                    <div class="flex items-center justify-between mb-3">
-                                        <span class="inline-block bg-green-100 text-green-700 text-xs px-3 py-1 rounded-full">Fruit Tree</span>
-                                        <span class="text-sm font-semibold">&#2547;500</span>
+            <div class="innerMainAreaDivWrapper   w-14/15 mt-[4vh] flex flex-row gap-4 justify-between items-start">
+                <div class="categoriesArea  w-3/20 bg-transparent rounded-box shadwow-lg  rounded-sm p-1 sticky top-[18vh]">
+                        <div class="categoriesAreaHeader  w-full h-auto ">
+                            <h2 class="categoriesAreaHeader_h2 text-[1.2rem] font-medium text-left my-auto mx-1 mb-2">Categories</h2>
+                        </div>
+                        <div id="cardsWrapper" class="cardsWrapper  w-full">
+                            <ul id="categoriesList" class="menu w-full px-0 gap-2">
+                                <li id="AllTreesBtn" class="w-full px-4 py-1 mx-0 text-[#ffffffec] hover:text-[#ffffffec] hover:bg-[#15803D] bg-[#15803D] rounded-sm shadow-md cursor-pointer">All Trees</li>
+                                <!-- <li class="w-full px-4 py-1 mx-0 text-[#1f2937] hover:text-[#ffffffec] bg-tranaparent hover:bg-[#15803D] rounded-sm">Fruit Trees</li>
+                                <li class="w-full px-4 py-1 mx-0 text-[#1f2937] hover:text-[#ffffffec] bg-tranaparent hover:bg-[#15803D] rounded-sm">Flowering Trees</li>
+                                <li class="w-full px-4 py-1 mx-0 text-[#1f2937] hover:text-[#ffffffec] bg-tranaparent hover:bg-[#15803D] rounded-sm">Shade Trees</li>
+                                <li class="w-full px-4 py-1 mx-0 text-[#1f2937] hover:text-[#ffffffec] bg-tranaparent hover:bg-[#15803D] rounded-sm">Medical Trees</li>
+                                <li class="w-full px-4 py-1 mx-0 text-[#1f2937] hover:text-[#ffffffec] bg-tranaparent hover:bg-[#15803D] rounded-sm">Timber Trees</li>
+                                <li class="w-full px-4 py-1 mx-0 text-[#1f2937] hover:text-[#ffffffec] bg-tranaparent hover:bg-[#15803D] rounded-sm">Evergreen Trees</li>
+                                <li class="w-full px-4 py-1 mx-0 text-[#1f2937] hover:text-[#ffffffec] bg-tranaparent hover:bg-[#15803D] rounded-sm">Ornamental Trees</li>
+                                <li class="w-full px-4 py-1 mx-0 text-[#1f2937] hover:text-[#ffffffec] bg-tranaparent hover:bg-[#15803D] rounded-sm">Bamboo</li>
+                                <li class="w-full px-4 py-1 mx-0 text-[#1f2937] hover:text-[#ffffffec] bg-tranaparent hover:bg-[#15803D] rounded-sm">Climbers</li>
+                                <li class="w-full px-4 py-1 mx-0 text-[#1f2937] hover:text-[#ffffffec] bg-tranaparent hover:bg-[#15803D] rounded-sm">Aquatic Plants</li> -->
+                            </ul>
+                        </div>
+                </div>
+
+                <div class="cardWrapperArea  w-14/20 bg-[#ffffff] rounded-box shadwow-lg  rounded-sm p-1">
+                        <div id="cardWrapperAreaHeader" class="cardWrapperAreaHeader  w-full h-auto ">
+
+                        </div>
+
+                </div>
+
+                <div class="cartArea  w-4/20 bg-[#ffffff] rounded-box shadwow-lg  rounded-sm p-4 sticky top-[18vh]">
+                        <div class="cartAreaHeader  w-full h-auto ">
+                            <h2 class="cartAreaHeader_h2 text-[1.2rem] font-medium text-left my-auto mx-2 pt-1 mb-2">Your Cart</h2>
+                        </div>
+                            <div id="cartProductsWrapper" class="menu w-full px-0 gap-4 flex flex-col">
+
+                                <div class="cardProduct  w-full px-4 py-1 mx-0 bg-[#f0fdf4] rounded-sm flex flex-row justify-between items-center gap-1 border border-[#f0fdf4] hover:border-[#15803c2f] hover:shadow-sm cursor-pointer">
+                                    <div class="flex flex-col gap-1">
+                                        <h3 class="productTitle px-0 text-semibold">Mango Tree</h3>
+                                        <h3 class="productPrice px-0 text-normal text-gray-500">
+                                            &#2547 <span id="productPrice">500</span>
+                                            &nbsp;&times;&nbsp; <span id="productQty">1</span>
+                                        </h3>
                                     </div>
-                                    <button class="btn w-full bg-[#15803d] text-white rounded-[2rem]">Add to Cart</button>
+                                    <div>
+                                        <button class="text-xl text-gray-400 cursor-pointer hover:text-red-500">&times;</button>
+                                    </div>
                                 </div>
 
-                        </div>
-                    </div>
 
-            </div>
+                                <hr class="w-full h-[1px] border-gray-300 mt-2 mb-2">
+                                <div class="totalPrice flex flex-row justify-between mx-1 ">
+                                    <h3 class="totalPriceTitle px-0 text-bold">Total:</h3>
+                                    <h3 class="totalPriceTitle px-0 text-bold">&#2547 <span id="totalPrice">500</span></h3>
+                                </div>
 
-            <div class="cartArea  w-4/20 bg-[#ffffff] rounded-box shadwow-lg  rounded-sm p-4">
-                    <div class="cartAreaHeader  w-full h-auto ">
-                        <h2 class="cartAreaHeader_h2 text-[1.2rem] font-medium text-left my-auto mx-2 pt-1 mb-2">Your Cart</h2>
-                    </div>
-                        <div id="cartProductsWrapper" class="menu w-full px-0 gap-[1px] flex flex-col">
-                            <div class="cardProduct  w-full px-4 py-1 mx-0 bg-[#f0fdf4] rounded-sm flex flex-row justify-between items-center gap-1 border border-[#f0fdf4] hover:border-[#15803c2f] hover:shadow-sm cursor-pointer">
-                                <div class="flex flex-col gap-1">
-                                    <h3 class="productTitle px-0 text-semibold">Mango Tree</h3>
-                                    <h3 class="productPrice px-0 text-normal text-gray-500">
-                                        &#2547 <span id="productPrice">500</span>
-                                        &nbsp;&times;&nbsp; <span id="productQty">1</span>
-                                    </h3>
-                                </div>
-                                <div>
-                                    <button class="text-xl text-gray-400 cursor-pointer hover:text-red-500">&times;</button>
-                                </div>
                             </div>
-                            <hr class="w-full h-[1px] border-gray-300 mt-2 mb-2">
-                            <div class="totalPrice flex flex-row justify-between mx-1 ">
-                                <h3 class="totalPriceTitle px-0 text-bold">Total:</h3>
-                                <h3 class="totalPriceTitle px-0 text-bold">&#2547 <span id="totalPrice">500</span></h3>
-                            </div>
-
-                        </div>
+                </div>
             </div>
         </div>
     </section>
@@ -242,7 +233,7 @@
 
     <!-- <script src="/public/assets/js/script.js"></script> -->
     <script src="/public/assets/js/loadCategories.js"></script>
-    <script src="/public/assets/js/filterByCategory.js"></script>
+    <script src="/public/assets/js/filterCards.js"></script>
 
 </body>
 </html>
