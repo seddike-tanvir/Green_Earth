@@ -93,7 +93,7 @@
             <h1 class="mainAreaHeader_h1 text-[1.6rem] font-semibold">Choose Your Trees</h1>
         </div>
 
-        <div class="innerMainAreaDivWrapper   w-14/15 mt-[4vh] flex flex-row gap-2 justify-between items-start">
+        <div class="innerMainAreaDivWrapper   w-14/15 mt-[4vh] flex flex-row gap-4 justify-between items-start">
             <div class="categoriesArea  w-3/20 bg-transparent rounded-box shadwow-lg  rounded-sm p-1">
                     <div class="categoriesAreaHeader  w-full h-auto ">
                         <h2 class="categoriesAreaHeader_h2 text-[1.2rem] font-medium text-left my-auto mx-1 mb-2">Categories</h2>
@@ -117,8 +117,23 @@
 
             <div class="cardWrapperArea  w-14/20 bg-[#ffffff] rounded-box shadwow-lg  rounded-sm p-1">
                     <div class="cardWrapperAreaHeader  w-full h-auto ">
-                        <h2 class="cardWrapperAreaHeader_h2 text-[1.2rem] font-semibold text-left my-auto mx-2"></h2>
-                    </div>            
+                        <!-- <h2 class="cardWrapperAreaHeader_h2 text-[1.2rem] font-semibold text-left my-auto mx-2">Check Our Latest Trees</h2> -->
+                        <div id="CardsWrapper" class="cardsGrid w-full mt-4 px-2 pb-4 grid justify-items-center grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+                                <!-- Card 1 -->
+                                <div class="productCard max-w-[17.5rem] bg-white rounded-lg shadow hover:shadow-md hover:shadow-[#1c97492f] border border-[#c3e7cea9] hover:border-[#97c9a6d3]  p-4">
+                                    <div class="media h-40 bg-gray-100 rounded-md mb-4"></div>
+                                    <h3 class="text-[1rem] font-semibold mb-2 hover:cursor-pointer hover:text-[#0d6e31ab] hover:underline">Mango Tree</h3>
+                                    <p class="text-sm text-gray-500 mb-3">A fast-growing tropical tree that produces delicious, juicy mangoes during summer.</p>
+                                    <div class="flex items-center justify-between mb-3">
+                                        <span class="inline-block bg-green-100 text-green-700 text-xs px-3 py-1 rounded-full">Fruit Tree</span>
+                                        <span class="text-sm font-semibold">&#2547;500</span>
+                                    </div>
+                                    <button class="btn w-full bg-[#15803d] text-white rounded-[2rem]">Add to Cart</button>
+                                </div>
+
+                        </div>
+                    </div>
+
             </div>
 
             <div class="cartArea  w-4/20 bg-[#ffffff] rounded-box shadwow-lg  rounded-sm p-4">
@@ -227,6 +242,7 @@
 
     <!-- <script src="/public/assets/js/script.js"></script> -->
     <script src="/public/assets/js/loadCategories.js"></script>
+    <script src="/public/assets/js/filterByCategory.js"></script>
 
 </body>
 </html>
