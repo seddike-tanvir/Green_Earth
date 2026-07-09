@@ -49,7 +49,7 @@ const createCardFromCards = (plants, CardsWrapper) => {
                                     <div class="flex flex-col h-full justify-between">
                                             <div>
                                                 <div class="media h-40 bg-gray-100 rounded-md mb-4">
-                                                    <img src="${plant.image}" alt="${plant.name}" class="w-full h-full object-cover rounded-md">
+                                                    <img src="${plant.image}" alt="${plant.name}" loading="lazy" class="w-full h-full object-cover rounded-md">
                                                 </div>
                                                 <h3 id="plantName" class="text-[1rem] w-max font-bold text-[#1f2937] mb-1 hover:cursor-pointer hover:text-[#15803d] hover:underline">${plant.name}</h3>
                                                 
@@ -109,7 +109,7 @@ const ShowPlantDetails = (plantId) => {
     const plantDetailsApiUrl = `https://openapi.programming-hero.com/api/plant/${plantId}`;
     // console.log(`Fetching details for plant ID: ${plantDetailsApiUrl}`);
 
-    
+
 }
 
 
